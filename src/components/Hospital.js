@@ -42,7 +42,7 @@ const Hospital = ({speciality}) => {
         .catch(error => {
             setMessage(error);
         });
-    }, []);
+    }, [speciality]);
     
     //console.log(hospitals);
     const handleMessage = (hospital) => {
