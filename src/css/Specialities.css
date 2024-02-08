@@ -1,0 +1,30 @@
+#medhead-form {
+    margin: auto;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    align-self: flex-start;
+    font-size: calc(10px + 2vmin);
+}
+
+.speciality-form {
+    display: flex;
+    flex: content;
+    flex-direction: column;
+    margin: 15px;
+    align-content: center;
+    align-self: start;
+}
+  
+
+
+
+.alert {text-decoration: red;}
+
+
+#speciality, #city{
+    font-size: 14px;; 
+}
+  
+  
+  

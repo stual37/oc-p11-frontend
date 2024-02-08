@@ -1,0 +1,58 @@
+.page {
+    display:flex;
+    flex: content;
+    flex-direction: column;
+    align-content: center;
+}
+
+table, th, td {
+    border: 1px solid;
+    color: black;
+}
+
+th, td {
+    padding: 10px;
+  }
+
+#hbs {
+    text-align: center;
+}
+
+
+@media (max-width: 300px) {
+    /* For smartphones: */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 8px;
+        overflow-x: auto;
+    }
+    
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 8px;
+        overflow-x: auto;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 12px;
+        overflow-x: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 12px;
+        overflow-x: auto;
+    }
+}

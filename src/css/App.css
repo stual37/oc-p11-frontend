@@ -1,0 +1,15 @@
+.App {
+  text-align:center;
+}
+
+.Body {
+  background-color: #dbe0ea;
+  min-height: 100vh;
+  display: flex;
+  flex: content;
+  flex-direction: column;
+  text-align: center;
+  
+  /*font-size: calc(10px + 2vmin);*/
+}
+

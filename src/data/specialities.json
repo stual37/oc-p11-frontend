@@ -1,0 +1,404 @@
+{
+    "specialities": {
+      "Speciality_1": {
+        "id": 1,
+        "idName": "speciality_1",
+        "name": "Anesthésie"
+      },
+      "Speciality_2": {
+        "id": 2,
+        "idName": "speciality_2",
+        "name": "Soins intensifs"
+      },
+      "Speciality_3": {
+        "id": 3,
+        "idName": "speciality_3",
+        "name": "Oncologie clinique"
+      },
+      "Speciality_4": {
+        "id": 4,
+        "idName": "speciality_4",
+        "name": "Spécialités dentaires supplémentaires"
+      },
+      "Speciality_5": {
+        "id": 5,
+        "idName": "speciality_5",
+        "name": "Radiologie dentaire et maxillo-faciale"
+      },
+      "Speciality_6": {
+        "id": 6,
+        "idName": "speciality_6",
+        "name": "Endodontie"
+      },
+      "Speciality_7": {
+        "id": 7,
+        "idName": "speciality_7",
+        "name": "Chirurgie buccale et maxillo-faciale"
+      },
+      "Speciality_8": {
+        "id": 8,
+        "idName": "speciality_8",
+        "name": "Pathologie buccale et maxillo-faciale"
+      },
+      "Speciality_9": {
+        "id": 9,
+        "idName": "speciality_9",
+        "name": "Médecine buccale"
+      },
+      "Speciality_10": {
+        "id": 10,
+        "idName": "speciality_10",
+        "name": "Chirurgie buccale"
+      },
+      "Speciality_11": {
+        "id": 11,
+        "idName": "speciality_11",
+        "name": "Orthodontie"
+      },
+      "Speciality_12": {
+        "id": 12,
+        "idName": "speciality_12",
+        "name": "Dentisterie pédiatrique"
+      },
+      "Speciality_13": {
+        "id": 13,
+        "idName": "speciality_13",
+        "name": "Parodontie"
+      },
+      "Speciality_14": {
+        "id": 14,
+        "idName": "speciality_14",
+        "name": "Prosthodontie"
+      },
+      "Speciality_15": {
+        "id": 15,
+        "idName": "speciality_15",
+        "name": "Dentisterie restauratrice"
+      },
+      "Speciality_16": {
+        "id": 16,
+        "idName": "speciality_16",
+        "name": "Dentisterie de soins spéciaux"
+      },
+      "Speciality_17": {
+        "id": 17,
+        "idName": "speciality_17",
+        "name": "Médecine d’urgence"
+      },
+      "Speciality_18": {
+        "id": 18,
+        "idName": "speciality_18",
+        "name": "Médecine interne de soins aigus"
+      },
+      "Speciality_19": {
+        "id": 19,
+        "idName": "speciality_19",
+        "name": "Allergie"
+      },
+      "Speciality_20": {
+        "id": 20,
+        "idName": "speciality_20",
+        "name": "Médecine audiovestibulaire"
+      },
+      "Speciality_21": {
+        "id": 21,
+        "idName": "speciality_21",
+        "name": "Cardiologie"
+      },
+      "Speciality_22": {
+        "id": 22,
+        "idName": "speciality_22",
+        "name": "Génétique clinique"
+      },
+      "Speciality_23": {
+        "id": 23,
+        "idName": "speciality_23",
+        "name": "Neurophysiologie clinique"
+      },
+      "Speciality_24": {
+        "id": 24,
+        "idName": "speciality_24",
+        "name": "Pharmacologie clinique et thérapeutique"
+      },
+      "Speciality_25": {
+        "id": 25,
+        "idName": "speciality_25",
+        "name": "Dermatologie"
+      },
+      "Speciality_26": {
+        "id": 26,
+        "idName": "speciality_26",
+        "name": "Endocrinologie et diabète sucré"
+      },
+      "Speciality_27": {
+        "id": 27,
+        "idName": "speciality_27",
+        "name": "Gastroentérologie"
+      },
+      "Speciality_28": {
+        "id": 28,
+        "idName": "speciality_28",
+        "name": "Médecine générale (interne)"
+      },
+      "Speciality_29": {
+        "id": 29,
+        "idName": "speciality_29",
+        "name": "Médecine générale"
+      },
+      "Speciality_30": {
+        "id": 30,
+        "idName": "speciality_30",
+        "name": "Médecine générale (GP) 6 mois"
+      },
+      "Speciality_31": {
+        "id": 31,
+        "idName": "speciality_31",
+        "name": "Médecine génito-urinaire"
+      },
+      "Speciality_32": {
+        "id": 32,
+        "idName": "speciality_32",
+        "name": "Maladies infectieuses"
+      },
+      "Speciality_33": {
+        "id": 33,
+        "idName": "speciality_33",
+        "name": "Oncologie médicale"
+      },
+      "Speciality_34": {
+        "id": 34,
+        "idName": "speciality_34",
+        "name": "Ophtalmologie médicale"
+      },
+      "Speciality_35": {
+        "id": 35,
+        "idName": "speciality_35",
+        "name": "Neurologie"
+      },
+      "Speciality_36": {
+        "id": 36,
+        "idName": "speciality_36",
+        "name": "Médecine du travail"
+      },
+      "Speciality_37": {
+        "id": 37,
+        "idName": "speciality_37",
+        "name": "Autre"
+      },
+      "Speciality_38": {
+        "id": 38,
+        "idName": "speciality_38",
+        "name": "Médecine palliative"
+      },
+      "Speciality_39": {
+        "id": 39,
+        "idName": "speciality_39",
+        "name": "Médecine de réadaptation"
+      },
+      "Speciality_40": {
+        "id": 40,
+        "idName": "speciality_40",
+        "name": "Médecine rénale"
+      },
+      "Speciality_41": {
+        "id": 41,
+        "idName": "speciality_41",
+        "name": "Médecine respiratoire"
+      },
+      "Speciality_42": {
+        "id": 42,
+        "idName": "speciality_42",
+        "name": "Rhumatologie"
+      },
+      "Speciality_43": {
+        "id": 43,
+        "idName": "speciality_43",
+        "name": "Médecine du sport et de l’exercice"
+      },
+      "Speciality_44": {
+        "id": 44,
+        "idName": "speciality_44",
+        "name": "Santé publique sexuelle et procréative"
+      },
+      "Speciality_45": {
+        "id": 45,
+        "idName": "speciality_45",
+        "name": "Cardiologie pédiatrique"
+      },
+      "Speciality_46": {
+        "id": 46,
+        "idName": "speciality_46",
+        "name": "Pédiatrie"
+      },
+      "Speciality_47": {
+        "id": 47,
+        "idName": "speciality_47",
+        "name": "Pathologie chimique"
+      },
+      "Speciality_48": {
+        "id": 48,
+        "idName": "speciality_48",
+        "name": "Neuropathologie diagnostique"
+      },
+      "Speciality_49": {
+        "id": 49,
+        "idName": "speciality_49",
+        "name": "Histopathologie médico-légale"
+      },
+      "Speciality_50": {
+        "id": 50,
+        "idName": "speciality_50",
+        "name": "Pathologie générale"
+      },
+      "Speciality_51": {
+        "id": 51,
+        "idName": "speciality_51",
+        "name": "Hématologie"
+      },
+      "Speciality_52": {
+        "id": 52,
+        "idName": "speciality_52",
+        "name": "Histopathologie"
+      },
+      "Speciality_53": {
+        "id": 53,
+        "idName": "speciality_53",
+        "name": "Immunologie"
+      },
+      "Speciality_54": {
+        "id": 54,
+        "idName": "speciality_54",
+        "name": "Microbiologie médicale"
+      },
+      "Speciality_55": {
+        "id": 55,
+        "idName": "speciality_55",
+        "name": "Pathologie pédiatrique et périnatale"
+      },
+      "Speciality_56": {
+        "id": 56,
+        "idName": "speciality_56",
+        "name": "Virologie"
+      },
+      "Speciality_57": {
+        "id": 57,
+        "idName": "speciality_57",
+        "name": "Service de santé communautaire dentaire"
+      },
+      "Speciality_58": {
+        "id": 58,
+        "idName": "speciality_58",
+        "name": "Service de santé communautaire médicale"
+      },
+      "Speciality_59": {
+        "id": 59,
+        "idName": "speciality_59",
+        "name": "Santé publique dentaire"
+      },
+      "Speciality_60": {
+        "id": 60,
+        "idName": "speciality_60",
+        "name": "Pratique de l’art dentaire"
+      },
+      "Speciality_61": {
+        "id": 61,
+        "idName": "speciality_61",
+        "name": "Santé publique"
+      },
+      "Speciality_62": {
+        "id": 62,
+        "idName": "speciality_62",
+        "name": "Psychiatrie infantile et adolescente"
+      },
+      "Speciality_63": {
+        "id": 63,
+        "idName": "speciality_63",
+        "name": "Psychiatrie légale"
+      },
+      "Speciality_64": {
+        "id": 64,
+        "idName": "speciality_64",
+        "name": "Psychiatrie générale"
+      },
+      "Speciality_65": {
+        "id": 65,
+        "idName": "speciality_65",
+        "name": "Psychiatrie de la vieillesse"
+      },
+      "Speciality_66": {
+        "id": 66,
+        "idName": "speciality_66",
+        "name": "Psychiatrie des troubles d’apprentissage"
+      },
+      "Speciality_67": {
+        "id": 67,
+        "idName": "speciality_67",
+        "name": "Psychothérapie"
+      },
+      "Speciality_68": {
+        "id": 68,
+        "idName": "speciality_68",
+        "name": "Radiologie clinique"
+      },
+      "Speciality_69": {
+        "id": 69,
+        "idName": "speciality_69",
+        "name": "Médecine nucléaire"
+      },
+      "Speciality_70": {
+        "id": 70,
+        "idName": "speciality_70",
+        "name": "Chirurgie cardiothoracique"
+      },
+      "Speciality_71": {
+        "id": 71,
+        "idName": "speciality_71",
+        "name": "Chirurgie générale"
+      },
+      "Speciality_72": {
+        "id": 72,
+        "idName": "speciality_72",
+        "name": "Histopathologie médico-légale"
+      },
+      "Speciality_73": {
+        "id": 73,
+        "idName": "speciality_73",
+        "name": "Neurochirurgie"
+      },
+      "Speciality_74": {
+        "id": 74,
+        "idName": "speciality_74",
+        "name": "Ophtalmologie"
+      },
+      "Speciality_75": {
+        "id": 75,
+        "idName": "speciality_75",
+        "name": "Otolaryngologie"
+      },
+      "Speciality_76": {
+        "id": 76,
+        "idName": "speciality_75",
+        "name": "Chirurgie pédiatrique"
+      },
+      "Speciality_77": {
+        "id": 77,
+        "idName": "speciality_77",
+        "name": "Chirurgie plastique"
+      },
+      "Speciality_78": {
+        "id": 78,
+        "idName": "speciality_78",
+        "name": "Traumatologie et chirurgie orthopédique"
+      },
+      "Speciality_79": {
+        "id": 79,
+        "idName": "speciality_79",
+        "name": "Urologie"
+      },
+      "Speciality_80": {
+        "id": 80,
+        "idName": "speciality_80",
+        "name": "Chirurgie vasculaire"
+      }
+    }
+  }
