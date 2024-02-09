@@ -8,11 +8,13 @@ import '../css/Hospital.css';
  * @param {*} param0 
  * @returns 
  */
-const Hospital = ({speciality}) => {
+const Hospital = ({speciality, onUpdate}) => {
     const[hospitals, setHospitals] = useState([]);
     const[messages, setMessage] = useState(null);
     
     // Nous lançons une réquête http sur le serveur API avec les paramêtres contenant la ville et l'id de la spécialités demandée
+    //console.log(onUpdate);
+
     useEffect(() => {
         const url = "http://localhost:9000/speciality/" + speciality;
         fetch(url, {
@@ -92,9 +94,15 @@ const Hospital = ({speciality}) => {
             setMessage(error);
         });
     }
+
+    const onBack = () => {
+        onUpdate(false, 0);
+    }
+
     
     return (
         <div className="Page">
+        <div className="Left"><button onClick={()=> onBack()}>Retour</button></div>
             <h2> Liste des hôpitaux disponibles :</h2>
             {hospitals == null ?
                 <Spinner animation="border" role="status">

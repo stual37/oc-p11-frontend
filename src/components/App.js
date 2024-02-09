@@ -17,7 +17,7 @@ const App = () => {
     
     // Remonter l'id a renvoyer ensuite à l'enfant Hospital, ain si que si le choix de la spécialité a été validé
     const onUpdate = (validated, idSPeciality) => {
-        console.log(" se lance depouis App.js");
+        console.log(" se lance depuis App.js");
         console.log(idSPeciality);
         setValidated(validated);
         setIdSpeciality(idSPeciality);
@@ -28,7 +28,7 @@ const App = () => {
     
     
 // Selon si le premier formulaire est valide avec le choix de la spécialités, nous affichons ce dit formulaire ou un tableau avec les hôpitaux disponibles
-    const vue = !validated ? (<Specialities onUpdate={onUpdate}/>) : ( <Hospital speciality={idSpeciality} />);
+    const vue = !validated ? (<Specialities onUpdate={onUpdate} />) : ( <Hospital speciality={idSpeciality} onUpdate={onUpdate}  />);
 
     return (
         <div>

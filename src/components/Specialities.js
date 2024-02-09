@@ -64,6 +64,8 @@ const Specialities = ({onUpdate}) => {
             setValidated(false);
         }
     };
+
+    
     return(
         <div>
             <h2>Veuillez fournir votre ville et la spécialité que vous recherchez</h2>

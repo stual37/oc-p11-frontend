@@ -18,6 +18,14 @@ th, td {
     text-align: center;
 }
 
+.Left {
+    display:flex;
+    flex: content;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
 
 @media (max-width: 300px) {
     /* For smartphones: */
