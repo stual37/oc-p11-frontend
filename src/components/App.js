@@ -13,22 +13,23 @@ import Footer from './Footer.js';
 
 const App = () => {
     const [validated, setValidated] = useState(false);
-    const [idSpeciality, setIdSpeciality] = useState(0);
+    const [selection, setSelection] = useState({});
     
     // Remonter l'id a renvoyer ensuite à l'enfant Hospital, ain si que si le choix de la spécialité a été validé
-    const onUpdate = (validated, idSPeciality) => {
+    const onUpdate = (validated, choice) => {
         console.log(" se lance depuis App.js");
-        console.log(idSPeciality);
+        console.log(choice);
+    
         setValidated(validated);
-        setIdSpeciality(idSPeciality);
+        setSelection(choice);
     }
        
-    
+    console.log(selection);
 
     
     
 // Selon si le premier formulaire est valide avec le choix de la spécialités, nous affichons ce dit formulaire ou un tableau avec les hôpitaux disponibles
-    const vue = !validated ? (<Specialities onUpdate={onUpdate} />) : ( <Hospital speciality={idSpeciality} onUpdate={onUpdate}  />);
+    const vue = !validated ? (<Specialities validated={validated} onValidated={setValidated} onSelection={setSelection} />) : ( <Hospital selection={selection} onSelection={setSelection} onValidated={setValidated}/>);
 
     return (
         <div>

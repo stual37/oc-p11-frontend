@@ -5,8 +5,8 @@ COPY src/ /frontend/src
 COPY package.json /frontend/
 COPY yarn*.lock /frontend/
 RUN npm install
-
-RUN pnm run build
+WORKDIR /public
+RUN npm run build
 CMD ["npm", "start"]
 
 #Stage 2
