@@ -1,35 +1,10 @@
-import {Button, Form, FormGroup, Spinner} from 'react-bootstrap';
+import {Button, Spinner} from 'react-bootstrap';
 import{useState, useEffect} from 'react';
 import {FormOption} from './FormOption.js';
 
+import Fetch from './Fetch.js';
 import '../css/Specialities.css';
 
-/**
- * 
- * @param {*} param0 
- * @returns 
- */
-
-async function getFetch(url){
-    // Nous récupérons la liste des spécialités
-    const res = await fetch(url, {
-        method: 'get',
-        mode: 'cors',  
-        site: 'cross-site',
-        'cache' : 'no-cache',
-        headers: {
-            'Accept' : 'application/json',
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin':'http://localhost:3000',
-            'Access-Control-Allow-Headers' : 'Accept, Content-Type, origin',
-            'Sec-Fetch-Site': 'cross-site',
-            'Sec-Fetch-Mode': 'no-cors'
-        },
-    });
-    const result = await res.json();
-    return result;
-    
-}
 
 const Specialities = ({validated, onValidated, onSelection}) => {
     //console.log(specialities);
@@ -41,20 +16,18 @@ const Specialities = ({validated, onValidated, onSelection}) => {
     const urlSpeciality = "http://localhost:9000/specialities";
     const urlCity = "http://localhost:9000/cities";
     useEffect(() => {
-        getFetch(urlSpeciality).then((data) => {
+        Fetch(urlSpeciality, 'GET').then((data) => {
             //console.log(data);
             setSpecialities(data);
         });
         
-        getFetch(urlCity).then((data) => {
+        Fetch(urlCity, 'GET').then((data) => {
             //console.log(data);
             setCities(data);
         });
         
     }, []);
     
-
-
     const handleSubmit = (event) => {        
         event.preventDefault();
         event.stopPropagation();
@@ -71,8 +44,6 @@ const Specialities = ({validated, onValidated, onSelection}) => {
             onSelection(choice);
             onValidated(true);
             // Nous récupérons l'id de la spécialités sélectionnée
-            
-            
         }
         
     };
@@ -105,7 +76,7 @@ const Specialities = ({validated, onValidated, onSelection}) => {
                                         defaut = "speciality_0"
                                     />
                                 </div>
-                                <Button type="submit" className="col-md-6 col-sm-6 text btn-primary" >Envoyer</Button>
+                                <Button type="submit" className="col-md-6 col-sm-6 text btn-primary" id='button'>Envoyer</Button>
                             </form>
                         </div>
                         

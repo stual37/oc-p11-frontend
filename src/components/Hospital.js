@@ -1,27 +1,8 @@
 import{useState, useEffect} from 'react';
 import {Button, Spinner, Table} from 'react-bootstrap';
-import '../css/Hospital.css';
 
-async function getFetch(url, methode){
-    // Nous récupérons la liste des spécialités
-    const res = await fetch(url, {
-        method: methode,
-        mode: 'cors',  
-        site: 'cross-site',
-        'cache' : 'no-cache',
-        headers: {
-            'Accept' : 'application/json',
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin':'http://localhost:3000',
-            'Access-Control-Allow-Headers' : 'Accept, Content-Type, origin',
-            'Sec-Fetch-Site': 'cross-site',
-            'Sec-Fetch-Mode': 'no-cors'
-        },
-    });
-    const result = await res.json();
-    return result;
-    
-}
+import Fetch from './Fetch.js';
+import '../css/Hospital.css';
 
 /**
  * 
@@ -30,8 +11,7 @@ async function getFetch(url, methode){
  */
 const Hospital = ({selection, onSelection, onValidated}) => {
     const[hospitals, setHospitals] = useState([]);
-    //const[messages, setMessage] = useState(null);
-    
+    //const[messages, setMessage] = useState(null); 
     // Nous lançons une réquête http sur le serveur API avec les paramêtres contenant la ville et l'id de la spécialités demandée
     //console.log(onUpdate);
     //console.log(selection);
@@ -39,74 +19,28 @@ const Hospital = ({selection, onSelection, onValidated}) => {
     useEffect(() => {
         const url = "http://localhost:9000/speciality?id=" + selection.speciality + "&city=" + selection.city ;
         console.log(url);
-        fetch(url, {
-            method: 'get',
-            mode: 'cors',  
-            site: 'cross-site',
-            'cache' : 'no-cache',
-            headers: {
-                'Accept' : 'application/json',
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin':'http://localhost:3000',
-                'Access-Control-Allow-Headers' : 'Accept, Content-Type, origin',
-                'Sec-Fetch-Site': 'cross-site',
-                'Sec-Fetch-Mode': 'no-cors'
-            },
-            
-        })
-        .then((response) => {   
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            } 
-            return response.json();
-        })
-        .then((data) => {
-            // Nous sauvegardons les données récupérées au format JSON sous forme de tableau
+        Fetch(url, 'GET').then((data)=> {
             setHospitals(data);
-        })
-        .catch(error => {
-            console.log(error);
-            //setMessage(error);
         });
-    }, []);
 
-    console.log(hospitals);
-    
+    }, [selection]);
+
+    //console.log(hospitals);
     //console.log(hospitals);
     const handleMessage = (e, hospital) => {
-        console.log(e.target);
-        console.log(hospital);
+        //console.log(e.target);
+        //console.log("Hôpital choisi : " + JSON.stringify(hospital));
+        //console.log(hospital);
         // URL qui va servir à mettre à jour la table hospital
         alert("Un lit vient de vous êtes réservé dans l'hôpital : " + hospital.name);
         
         const url = "http://localhost:9000/hospital/reserve-bed/" + hospital.id;
-        fetch(url, {
-            method: 'PUT',
-            mode: 'cors',  
-            site: 'cross-site',
-            'cache' : 'no-cache',
-            headers: {
-                'Accept' : 'application/json',
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin':'http://localhost:3000',
-                'Access-Control-Allow-Headers' : 'Accept, Content-Type, origin',
-                'Sec-Fetch-Site': 'cross-site',
-                'Sec-Fetch-Mode': 'no-cors'
-            },
-        })
-        .then((response) => {   
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            } 
-            return response.json();
-        })
-        .then((data) => {
-            // Nous mettons à jour les données sous forme de tableau
+        Fetch(url, 'PUT').then((data)=> {
             let newHospitals = [] ;
-            console.log(data);
-            console.log(hospitals);
+            //console.log(data);
+            //console.log(hospitals);
             hospitals.map((hospital) => {
-                console.log(hospital);
+                //console.log(hospital);
                 if(hospital.id === data.id) {
                     newHospitals.push(data);
                 }
@@ -114,15 +48,10 @@ const Hospital = ({selection, onSelection, onValidated}) => {
                     newHospitals.push(hospital)
                 }
             });
-            console.log(newHospitals);
+            //console.log(newHospitals);
             //Nous mettons à jour le tableau des hôpitaux
             setHospitals(newHospitals);
-        })
-        .catch(error => {
-            console.log(error);
-            //setMessage(error);
         });
-        
     }
 
     const onBack = () => {
@@ -168,7 +97,7 @@ const Hospital = ({selection, onSelection, onValidated}) => {
                                     )}
                                 </td>
                                 <td>
-                                    {hospital.bedAvailable == 0 ?
+                                    {hospital.bedAvailable === 0 ?
                                         <div>Il n'y a pas de lit disponible</div>
                                     :    
                                         <Button type="submit" onClick={(e) => handleMessage(e, hospital) }  className="btn-primary">Réserver</Button>
@@ -177,14 +106,11 @@ const Hospital = ({selection, onSelection, onValidated}) => {
                             </tr>    
                         )
                     }
-                          
                     </tbody>
                 </Table>
             }
         </div>
     );
 }
-
-
 
 export default Hospital;
