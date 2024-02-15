@@ -27,6 +27,5 @@ describe('Fetch', () => {
         // Test sur la méthode fetch
         
         const res = jest.fn(() => fetchCities);
-        console.log(res);
     })
 })

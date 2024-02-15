@@ -27,13 +27,13 @@ const Specialities = ({validated, onValidated, onSelection}) => {
         });
         
     }, []);
+
+    //console.log(cities);
     
     const handleSubmit = (event) => {        
         event.preventDefault();
         event.stopPropagation();
         const form = event.target;
-        //console.log(form.city.value);
-        //console.log(form.speciality.value);
         
         if (form.validated === "false" || form.speciality.value === 'speciality_0' || form.city.value === 'city_0') {
             validated = "false";

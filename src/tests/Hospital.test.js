@@ -10,11 +10,11 @@ describe("<Hospital />", () => {
     })
 
     test('reserve bed', ()=> {
-        const onClick = jest.fn();
         const selection = {speciality: 1, city: 1} ;
         render(<Hospital selection={selection} />);
         const button = screen.getByRole('button');
         expect(button).toBeInTheDocument();
         button.dispatchEvent(new MouseEvent("click", { hospital: 1 }));
     })
+
 })

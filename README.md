@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Pour démarrer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Récupération du projet
 
-## Available Scripts
+ Dans un terminale lancez  depuis le répertoire choisi : 
 
-In the project directory, you can run:
+        git clone https://github.com/stual37/oc-p11-frontend.git
 
-### `npm start`
+## Utiliser l'application en mode développemnt
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Effectuez ensuite : 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+        cd frontend
+        npm start
 
-### `npm test`
+Vous serez en m-ode développement
+Vous pourrez alors ouvrir dans un navigateur web  [http://localhost:3000](http://localhost:3000) .
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Effectuer les tests
 
-### `npm run build`
+Dans le terminal, depuis le répertoire frontend , lancez : 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        npm test
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Compiler le projet 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Dans le terminal, depuis le répertoire frontend , lancez : 
 
-### `npm run eject`
+        npm run build
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+L'application pourras ensuite être déployé. 
+Il faudra à ce moment pointé sur le répertoire `public`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Stratégie du workflow
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Le workflow comprend 5 branches :
+ - Master : La branche principale, elle ne doit pas être modifié directement et doit rester 'saine'.
+ - develop : Branche principale servant pour le développement, il faut ensuite réaliser depuis cette branche une pull request vers la branche Master afin de faire les mises à jours des parties développés.
+ - feature : Branche servant à développer des fonctionnalités supplémentaires, elle doit ensuite pusser vers la branche develop une fois validé
+ - htofix : Branche servant à corriger des bugs,
+ - release : Branche servant à réaliser les versions qui seront ensuites compilé pour la mise en production
