@@ -13,8 +13,8 @@ const Specialities = ({validated, onValidated, onSelection}) => {
     const [cities, setCities] = useState(null);
     //const [messages, setMessage] = useState('');
 
-    const urlSpeciality = "http://localhost:9000/specialities";
-    const urlCity = "http://localhost:9000/cities";
+    const urlSpeciality = "specialities";
+    const urlCity = "cities";
     useEffect(() => {
         Fetch(urlSpeciality, 'GET').then((data) => {
             //console.log(data);

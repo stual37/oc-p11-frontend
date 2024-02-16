@@ -17,7 +17,7 @@ const Hospital = ({selection, onSelection, onValidated}) => {
     //console.log(selection);
 
     useEffect(() => {
-        const url = "http://localhost:9000/speciality?id=" + selection.speciality + "&city=" + selection.city ;
+        const url = "speciality?id=" + selection.speciality + "&city=" + selection.city ;
         console.log(url);
         Fetch(url, 'GET').then((data)=> {
             setHospitals(data);
@@ -34,7 +34,7 @@ const Hospital = ({selection, onSelection, onValidated}) => {
         // URL qui va servir à mettre à jour la table hospital
         alert("Un lit vient de vous êtes réservé dans l'hôpital : " + hospital.name);
         
-        const url = "http://localhost:9000/hospital/reserve-bed/" + hospital.id;
+        const url = "hospital/reserve-bed/" + hospital.id;
         Fetch(url, 'PUT').then((data)=> {
             let newHospitals = [] ;
             //console.log(data);
