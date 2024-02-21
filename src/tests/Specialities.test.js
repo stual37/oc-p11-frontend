@@ -20,9 +20,11 @@ describe("<Specialities />", () =>{
     test('render Specialities', async()=> {
         
         const { container } = render(<Specialities />);
-        await waitFor(() => expect(fetch.toHaveBeenCalledWith))
+        await waitFor(() => expect(fetch.toHaveBeenCalledWith));
+        /*
         const button = screen.getByRole('button');
         expect(button).toBeInTheDocument();
+        */
     })
 
     

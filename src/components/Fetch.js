@@ -17,7 +17,8 @@ async function Fetch(path, method) {
             'Access-Control-Allow-Origin':'*',
             'Access-Control-Allow-Headers' : 'Accept, Content-Type, origin',
             'Sec-Fetch-Site': 'cross-site',
-            'Sec-Fetch-Mode': 'cors'
+            'Sec-Fetch-Mode': 'cors',
+            'API-KEY': 'MedHead-PassWord+250.'
         },
     });
     const result = await res.json();
