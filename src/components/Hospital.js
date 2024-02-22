@@ -39,7 +39,7 @@ const Hospital = ({selection, onSelection, onValidated}) => {
             let newHospitals = [] ;
             //console.log(data);
             //console.log(hospitals);
-            hospitals.map((hospital) => {
+            let res = hospitals.map((hospital) => {
                 //console.log(hospital);
                 if(hospital.id === data.id) {
                     newHospitals.push(data);
