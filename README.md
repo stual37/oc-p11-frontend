@@ -36,11 +36,11 @@ Il faudra à ce moment pointé sur le répertoire `public`
 ## Stratégie du workflow
 
 Le workflow comprend 5 branches :
-        - Master : La branche principale, elle ne doit pas être modifié directement et doit rester 'saine'.
-        - develop : Branche principale servant pour le développement, il faut ensuite réaliser depuis cette branche une pull request vers la branche Master afin de faire les mises à jours des parties développés.
-        - feature : Branche servant à développer des fonctionnalités supplémentaires, elle doit ensuite pusser vers la branche develop une fois validé
-        - htofix : Branche servant à corriger des bugs,
-        - release : Branche servant à réaliser les versions qui seront ensuites compilé pour la mise en production
+- Master : La branche principale, elle ne doit pas être modifié directement et doit rester 'saine'.
+- develop : Branche principale servant pour le développement, il faut ensuite réaliser depuis cette branche une pull request vers la branche Master afin de faire les mises à jours des parties développés.
+- feature : Branche servant à développer des fonctionnalités supplémentaires, elle doit ensuite pusser vers la branche develop une fois validé
+- htofix : Branche servant à corriger des bugs,
+- release : Branche servant à réaliser les versions qui seront ensuites compilé pour la mise en production
 
  ## Intégration à la CI-CD
 
@@ -69,12 +69,12 @@ Pour cela il faut cliquer sur 'Administrer Jenkins', puis 'Plugoins' dans 'Plugi
 Il y a plus d'information concernant cette partie sur :  [https://plugins.jenkins.io/nodejs/](https://plugins.jenkins.io/nodejs/)
 
 Pour utiliser ensuite la CI-CD, dans Jenkins, il faut  : 
-        - Depuis le tableau de bord cliquer à gauche sur "Nouveau item",
-        - donner unnom (ex.: frontend),
-        - Choisir Pipeline,
-        - Cocher "GitHub project", et lui aissigner le lien du projet (ici : https://github.com/stual37/oc-p11-frontend.git),
-        - Au niveau de Pipeline choisir "Pipeline script From SCM",
-        - Entrer sur SCM à nouveau l'URL entré précédement (soit : https://github.com/stual37/oc-p11-frontend.git),
-        - Laisser le reste par défaut,
-        - Sauvegarder.
+- Depuis le tableau de bord cliquer à gauche sur "Nouveau item",
+- donner unnom (ex.: frontend),
+- Choisir Pipeline,
+- Cocher "GitHub project", et lui aissigner le lien du projet (ici : https://github.com/stual37/oc-p11-frontend.git),
+- Au niveau de Pipeline choisir "Pipeline script From SCM",
+- Entrer sur SCM à nouveau l'URL entré précédement (soit : https://github.com/stual37/oc-p11-frontend.git),
+- Laisser le reste par défaut,
+- Sauvegarder.
 Ensuite, il suffit de cliquer sur " Lancer un Build"
