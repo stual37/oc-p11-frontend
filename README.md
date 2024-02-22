@@ -10,7 +10,8 @@
 
 Effectuez ensuite : 
 
-        cd frontend
+        cd oc-p11-frontend
+        npm install
         npm start
 
 Vous serez en m-ode développement
