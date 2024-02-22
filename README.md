@@ -1,5 +1,10 @@
 # Pour démarrer
 
+Sur la page de connexion, pour se connecter, utiliser :
+username : user
+password : password 
+
+
 ## Récupération du projet
 
  Dans un terminale lancez  depuis le répertoire choisi : 

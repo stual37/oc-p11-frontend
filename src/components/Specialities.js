@@ -6,7 +6,7 @@ import Fetch from './Fetch.js';
 import '../css/Specialities.css';
 
 
-const Specialities = ({validated, onValidated, onSelection, token}) => {
+const Specialities = ({validated, onValidated, onSelection}) => {
     //console.log(specialities);
     const [specialities, setSpecialities] = useState(null);
     const [cities, setCities] = useState(null);
@@ -15,7 +15,7 @@ const Specialities = ({validated, onValidated, onSelection, token}) => {
     const urlSpeciality = "specialities";
     const urlCity = "cities";
     useEffect(() => {
-        Fetch(urlSpeciality, 'GET', token).then((data) => {
+        Fetch(urlSpeciality, 'GET').then((data) => {
             //console.log(data);
             setSpecialities(data);
         });

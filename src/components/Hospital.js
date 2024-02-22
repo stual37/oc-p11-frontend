@@ -9,7 +9,7 @@ import '../css/Hospital.css';
  * @param {*} param0 
  * @returns 
  */
-const Hospital = ({selection, onSelection, onValidated, token}) => {
+const Hospital = ({selection, onSelection, onValidated}) => {
     const[hospitals, setHospitals] = useState([]);
     //const[messages, setMessage] = useState(null); 
     // Nous lançons une réquête http sur le serveur API avec les paramêtres contenant la ville et l'id de la spécialités demandée
@@ -19,7 +19,7 @@ const Hospital = ({selection, onSelection, onValidated, token}) => {
     useEffect(() => {
         const url = "speciality?id=" + selection.speciality + "&city=" + selection.city ;
         console.log(url);
-        Fetch(url, 'GET', token).then((data)=> {
+        Fetch(url, 'GET').then((data)=> {
             setHospitals(data);
         });
 
@@ -35,7 +35,7 @@ const Hospital = ({selection, onSelection, onValidated, token}) => {
         alert("Un lit vient de vous êtes réservé dans l'hôpital : " + hospital.name);
         
         const url = "hospital/reserve-bed/" + hospital.id;
-        Fetch(url, 'PUT', token).then((data)=> {
+        Fetch(url, 'PUT').then((data)=> {
             let newHospitals = [] ;
             //console.log(data);
             //console.log(hospitals);
