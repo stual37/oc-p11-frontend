@@ -1,10 +1,8 @@
 import{useState} from 'react';
 
 //import SpecialitiesList from '../data/specialities.json';
-import Header from './Header.js';
 import Specialities from './Specialities.js';
 import Hospital from './Hospital.js'; 
-import Footer from './Footer.js';
 
 
 const Search = () => {
