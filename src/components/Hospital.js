@@ -39,7 +39,10 @@ const Hospital = ({selection, onSelection, onValidated}) => {
             let newHospitals = [] ;
             //console.log(data);
             //console.log(hospitals);
-            let res = hospitals.map((hospital) => {
+            //Nous n'avons pas besoin que notre map nous retourne une valeur, 
+            // pour éviter un warning et un problème à la compilation, nous rajoutons le ligne suivante
+            // eslint-disable-next-line
+            hospitals.map((hospital) => {
                 //console.log(hospital);
                 if(hospital.id === data.id) {
                     newHospitals.push(data);
@@ -48,7 +51,7 @@ const Hospital = ({selection, onSelection, onValidated}) => {
                     newHospitals.push(hospital)
                 }
             });
-            //console.log(newHospitals);
+            
             //Nous mettons à jour le tableau des hôpitaux
             setHospitals(newHospitals);
         });
