@@ -5,7 +5,7 @@ const PORT = 9001;
 
 async function Fetch(path, method) {
     const url = PROTOCOL + "://" + IP + ":" + PORT + "/" + path; 
-    console.log(url);
+//    console.log(url);
     const res = await fetch(url, {
         method: method,
         mode: 'cors',  

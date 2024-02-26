@@ -13,7 +13,7 @@ const Specialities = ({validated, onValidated, onSelection}) => {
     //const [messages, setMessage] = useState('');
 
     const urlSpeciality = "specialities";
-    const urlCity = "cities";
+    //const urlCity = "cities";
     useEffect(() => {
         Fetch(urlSpeciality, 'GET').then((data) => {
             //console.log(data);

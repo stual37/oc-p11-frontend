@@ -18,7 +18,7 @@ const Hospital = ({selection, onSelection, onValidated}) => {
 
     useEffect(() => {
         const url = "speciality?id=" + selection.speciality + "&city=" + selection.city ;
-        console.log(url);
+    //    console.log(url);
         Fetch(url, 'GET').then((data)=> {
             setHospitals(data);
         });
