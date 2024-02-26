@@ -10,7 +10,7 @@ describe('Fetch', () => {
     const fetchCities = () => {return CITIES};
     const fetchSpecialities = () => {return SPECIALITIES};
     
-    const url = 'htt://localhost:9000/specialities';
+    const url = SPECIALITIES;
     let mockResponse = {};
     beforeEach(() => {
         jest.spyOn(global, 'fetch').mockResolvedValue({
