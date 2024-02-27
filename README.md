@@ -73,7 +73,7 @@ Il y a plus d'information concernant cette partie sur :  [https://plugins.jenkin
 
 Pour utiliser ensuite la CI-CD, dans Jenkins, il faut  : 
 - Depuis le tableau de bord cliquer à gauche sur "Nouveau item",
-- donner unnom (ex.: frontend),
+- donner un nom (ex.: frontend),
 - Choisir Pipeline,
 - Cocher "GitHub project", et lui aissigner le lien du projet (ici : https://github.com/stual37/oc-p11-frontend.git),
 - Au niveau de Pipeline choisir "Pipeline script From SCM",
