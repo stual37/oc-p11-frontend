@@ -1,8 +1,8 @@
 # Pour démarrer
 
 Sur la page de connexion, pour se connecter, utiliser :
-username : user
-password : password 
+- username : user
+- password : password 
 
 
 ## Récupération du projet
