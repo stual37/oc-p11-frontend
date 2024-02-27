@@ -62,9 +62,7 @@ Execuer ensuite Jenkins depuis une ligne de commande avec
 Un mot de passe pour l'utilisateur admin sera alors crée et fourni, il suffit de le copier et de le sauvegarder.
 Ce mot de passe changera à chaque fois que la machine sera créée.
 
-Dans un navigateur lancer : 
-
-        [http://localhost:8080/](http://localhost:8080/)
+Dans un navigateur lancer : [http://localhost:8080/](http://localhost:8080/)
 
 Jenjkins ser à ce moment disponible,il suffit d'entrer admin comme utilisateur et le motde passe qui a été fournis au moment du lancement de l'image docker.
 
